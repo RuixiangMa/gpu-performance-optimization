@@ -4,29 +4,43 @@ This project collects and implements various GPU performance optimization algori
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Optimization Algorithms](#optimization-algorithms)
-3. [Usage](#usage)
-4. [Contributing](#contributing)
+* [Introduction](#introduction)
+* [Project Structure](#project-structure)
+* [Optimization Algorithms](#optimization-algorithms)
+* [Memory Optimization Examples](#memory-optimization-examples)
 
 ## Introduction
 
-With the development of LLMs and high-performance computing, GPUs play an increasingly important role in accelerating computational tasks. However, to fully leverage GPU potential, various optimization techniques are needed to improve performance. This project aggregates multiple practical GPU optimization algorithms and techniques.
+With the development of LLMs and high-performance computing, GPUs play an increasingly important role in accelerating computational tasks. However, to fully leverage GPU potential, various optimization techniques are needed to improve performance. This project serves as a collection of GPU optimization techniques and algorithms that can be applied to enhance computational efficiency.
+
+## Project Structure
+
+The project is organized to demonstrate various GPU optimization concepts:
+- `Memory/` - Contains memory access pattern optimizations
 
 ## Optimization Algorithms
 
-### Completed Algorithms List
-
 | Algorithm Category | Algorithm Name | Brief Description | Status |
 |-------------------|----------------|-------------------|--------|
+| Memory Access | Shared Memory Optimization | Shows efficient shared memory usage for bank conflict | ✅ |
+| Memory Access | Global Memory Coalescing | Demonstrates optimal memory access patterns for better bandwidth utilization | ✅ |
 
-### Pending Algorithms List
+## Memory Optimization Examples
 
-| Algorithm Category | Algorithm Name | Brief Description | Status |
-|-------------------|----------------|-------------------|--------|
+This project includes practical examples demonstrating key memory optimization techniques:
 
-## Usage
+### Shared Memory Optimization
+- Demonstrates shared memory bank conflicts avoidance
+- Includes shared memory initialization and synchronization examples
+- Examples are located in the `Memory/Shared-Memory` directory.
 
-Each optimization algorithm will include the following:
-- Implementation code examples
-- Performance testing and comparison results
+### Global Memory Coalescing
+- Demonstrates the impact of memory access patterns on performance
+- Shows coalesced vs non-coalesced memory access
+- Includes examples of memory access patterns and their impact on performance
+- Examples are located in the `Memory/Global-Memory` directory.
+
+
+## References
+
+1. Hijma, Pieter and Heldens, Stijn and Sclocco, Alessio and van Werkhoven, Ben and Bal, Henri E. Optimization Techniques for GPU Programming. Association for Computing Machinery, 2023.

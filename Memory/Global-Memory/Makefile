@@ -1,4 +1,4 @@
-# Makefile for CUDA Bank Conflict Test
+# Makefile for CUDA Global Memory Optimization Test
 
 # Detect if we're on macOS or Linux
 UNAME_S := $(shell uname -s)
@@ -16,14 +16,14 @@ endif
 CFLAGS = -O3 -arch=sm_89
 
 # Default target
-all: bank_conflict
+all: global_memory_optimization
 
 # Linking rules
-bank_conflict: bank_conflict.cu
-	$(NVCC) $(CFLAGS) -o bank_conflict bank_conflict.cu
+global_memory_optimization: global_memory_optimization.cu
+	$(NVCC) $(CFLAGS) -o global_memory_optimization global_memory_optimization.cu
 
 # Clean up
 clean:
-	rm -f bank_conflict
+	rm -f global_memory_optimization
 
 .PHONY: all clean

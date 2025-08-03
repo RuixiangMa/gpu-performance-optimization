@@ -18,7 +18,7 @@ This repository contains CUDA implementations for shared memory optimization tec
 ## Build Instructions
 
 ```bash
-make
+make bank_conflict
 ```
 
 ## Usage

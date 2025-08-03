@@ -121,8 +121,10 @@ void runTest() {
     printf("Reordering: %.5f ms\n", std::chrono::duration<double>(end - start).count() * 10);
 
     // 清理
-    free(h_in); free(h_out);
-    cudaFree(d_in); cudaFree(d_out);
+    free(h_in); 
+    free(h_out);
+    cudaFree(d_in); 
+    cudaFree(d_out);
 }
 
 int main() {
