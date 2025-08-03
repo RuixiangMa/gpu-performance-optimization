@@ -1,39 +1,32 @@
-# GPU性能优化算法集合
+# GPU Performance Optimization Algorithms
 
-本项目收集和实现了多种GPU性能优化算法，旨在提升GPU计算效率、减少内存带宽消耗并提高整体运行速度。
+This project collects and implements various GPU performance optimization algorithms, aiming to enhance GPU computing efficiency, reduce memory bandwidth consumption, and improve overall execution speed.
 
-## 目录
+## Table of Contents
 
-1. [简介](#简介)
-2. [优化算法](#优化算法)
-3. [使用方法](#使用方法)
-4. [贡献](#贡献)
+1. [Introduction](#introduction)
+2. [Optimization Algorithms](#optimization-algorithms)
+3. [Usage](#usage)
+4. [Contributing](#contributing)
 
-## 简介
+## Introduction
 
-随着深度学习和高性能计算的发展，GPU在加速计算任务方面发挥着越来越重要的作用。然而，要充分发挥GPU的潜力，需要采用各种优化技术来提升性能。本项目汇集了多种实用的GPU优化算法和技巧。
+With the development of LLMs and high-performance computing, GPUs play an increasingly important role in accelerating computational tasks. However, to fully leverage GPU potential, various optimization techniques are needed to improve performance. This project aggregates multiple practical GPU optimization algorithms and techniques.
 
-## 优化算法
+## Optimization Algorithms
 
-### 已完成的算法列表
+### Completed Algorithms List
 
-| 算法类别 | 算法名称 | 简要说明 | 状态 |
-|---------|---------|---------|------|
-| 内存优化 | 共享内存优化 | 利用GPU的共享内存减小全局内存访问延迟 | ✅ 完成 |
+| Algorithm Category | Algorithm Name | Brief Description | Status |
+|-------------------|----------------|-------------------|--------|
 
-### 未完成的算法列表
+### Pending Algorithms List
 
-| 算法类别 | 算法名称 | 简要说明 | 状态 |
-|---------|---------|---------|------|
+| Algorithm Category | Algorithm Name | Brief Description | Status |
+|-------------------|----------------|-------------------|--------|
 
-## 使用方法
+## Usage
 
-每个优化算法都将包含以下内容：
-- 算法说明和原理
-- 实现代码示例
-- 性能测试和对比结果
-- 使用指南和最佳实践
-
-## 贡献
-
-欢迎为本项目贡献新的GPU优化算法或改进现有实现。请提交Pull Request并确保代码遵循项目规范。
+Each optimization algorithm will include the following:
+- Implementation code examples
+- Performance testing and comparison results
