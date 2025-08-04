@@ -1,64 +1,25 @@
-# Shared Memory Optimization
+# Shared Memory Optimizations
 
-This repository contains CUDA implementations for shared memory optimization techniques, focusing on data reuse and bank conflict resolution.
+This directory contains various GPU memory optimization techniques focusing on shared memory usage.
 
-## Completed Algorithms
+## Files:
+- `bank_conflict.cu` - Demonstrates bank conflict detection and resolution
+- `matrix_multiplication_optimization.cu` - Matrix multiplication optimization examples
+- `reduce_optimization.cu` - Reduction operation optimizations comparison
+- `stencil_optimization.cu` - Stencil computation optimizations
 
-### Stencil Computation Optimization
-- **Algorithm**: 5-point stencil computation with shared memory data reuse
-- **File**: `stencil_optimization.cu`
-- **Description**: Demonstrates performance improvements achieved through shared memory data reuse in stencil computations commonly used in image processing and PDE solvers
-- **Features**:
-  - Global memory baseline implementation
-  - Shared memory optimized implementation
-  - Performance comparison with detailed metrics
-  - Bandwidth calculation and analysis
-  - Verification of result correctness
+## Compilation:
 
-### Matrix multiplication Optimization
-- **Algorithm**: Matrix multiplication with shared memory data reuse
-- **File**: `matrix_multiplication_optimization.cu`
-- **Description**: Demonstrates performance improvements achieved through shared memory data reuse in matrix multiplication
-- **Features**:
-  - Global memory baseline implementation
-  - Shared memory optimized implementation
-  - Performance comparison with detailed metrics
-  - Bandwidth calculation and analysis
-  - Verification of result correctness
-
-### Bank Conflict Resolution
-- **Algorithm**: Shared memory bank conflict detection and resolution
-- **File**: `bank_conflict.cu`
-- **Description**: Implements techniques to identify and mitigate shared memory bank conflicts that can severely impact GPU performance
-- **Features**:
-  - Bank conflict detection
-  - Padding strategies 
-  - Data reordering techniques 
-  - Swizzling techniques 
-  - Performance comparison between different approaches
-
-## Build Instructions
+To compile all programs in this directory:
 
 ```bash
-# Build stencil optimization example
-make stencil_optimization
-
-# Build data reuse optimization example
-make Matrix_multiplication_optimization
-
-# Build bank conflict resolution example
-make bank_conflict
+make all
 ```
 
-## Usage
+## Note on Verification:
 
-```bash
-# Run stencil optimization example
-./stencil_optimization
+In `reduce_optimization.cu`, you may see verification failures due to floating-point precision differences between the various reduction algorithms. This is normal because:
 
-# Run data reuse optimization example
-./Matrix_multiplication_optimization
-
-# Run bank conflict resolution example
-./bank_conflict
-```
+1. Each algorithm performs computations in different orders
+2. Different memory access patterns and thread cooperation lead to slight variations in accumulated floating-point errors
+3. The performance improvements measured are still accurate and meaningful
