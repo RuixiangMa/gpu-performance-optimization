@@ -4,7 +4,7 @@ NVCC ?= nvcc
 CFLAGS ?= -O3 -arch=sm_89
 
 # Default target - builds all programs
-all: bank_conflict matrix_multiplication_optimization reduce_optimization stencil_optimization thread_coarsening
+all: bank_conflict matrix_multiplication_optimization reduce_optimization stencil_optimization thread_coarsening privatization_optimization
 
 # Compile bank_conflict program
 bank_conflict: bank_conflict.cu
@@ -26,8 +26,12 @@ stencil_optimization: stencil_optimization.cu
 thread_coarsening: thread_coarsening.cu
 	$(NVCC) $(CFLAGS) -o thread_coarsening thread_coarsening.cu
 
+# Compile privatization_optimization program
+privatization_optimization: privatization_optimization.cu
+	$(NVCC) $(CFLAGS) -o privatization_optimization privatization_optimization.cu
+
 # Clean build artifacts
 clean:
-	rm -f bank_conflict matrix_multiplication_optimization reduce_optimization stencil_optimization thread_coarsening
+	rm -f bank_conflict matrix_multiplication_optimization reduce_optimization stencil_optimization thread_coarsening privatization_optimization
 
 .PHONY: all clean
